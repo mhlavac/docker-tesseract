@@ -18,7 +18,7 @@ docker run --rm -it --network none -v $PWD:/home/work mhlavac/docker-tesseract o
 
 image2text-deu: same as above but for image, this will generate output.txt
 ```
-docker run --rm -it --network none -v $PWD:/home/work mhlavac/docker-tesseract pdf2text-deu my_document.png output 
+docker run --rm -it --network none -v $PWD:/home/work mhlavac/docker-tesseract image2text-deu my_document.png output 
 ```
 
 ## Set up an aliases
