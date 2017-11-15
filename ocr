@@ -16,8 +16,8 @@ convert -density 300 $1 pages-%03d.png
 # OCR
 echo "Converting images to text"
 for page in pages-*.png ; do
-    tesseract -l $2 /home/work/$page ../${page%.png}
-    echo $page.txt
+    tesseract -l $2 /home/work/$page /home/work/${page%.png}
+    echo ${page%.png}.txt
 done
 
 # Clean the tmp directory

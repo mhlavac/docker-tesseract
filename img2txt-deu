@@ -1,0 +1,3 @@
+#!/bin/bash
+
+tesseract -l deu+ces+eng $@

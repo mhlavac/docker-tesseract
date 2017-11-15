@@ -10,8 +10,8 @@ COPY ocr /bin/ocr
 COPY ocr-ces /bin/ocr-ces
 COPY ocr-deu /bin/ocr-deu
 COPY ocr-eng /bin/ocr-eng
-COPY image2text-ces /bin/image2text-ces
-COPY image2text-deu /bin/image2text-deu
-COPY image2text-eng /bin/image2text-eng
+COPY img2txt-ces /bin/img2txt-ces
+COPY img2txt-deu /bin/img2txt-deu
+COPY img2txt-eng /bin/img2txt-eng
 
 WORKDIR /home/work

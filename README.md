@@ -16,9 +16,9 @@ ocr-deu: same as above but for deu
 docker run --rm -it --network none -v $PWD:/home/work mhlavac/docker-tesseract ocr-deu my_document.pdf 
 ```
 
-image2text-deu: same as above but for image, this will generate output.txt
+img2txt-deu: same as above but for image, this will generate output.txt
 ```
-docker run --rm -it --network none -v $PWD:/home/work mhlavac/docker-tesseract image2text-deu my_document.png output 
+docker run --rm -it --network none -v $PWD:/home/work mhlavac/docker-tesseract img2txt-deu my_document.png output
 ```
 
 ## Set up an aliases
@@ -29,7 +29,7 @@ You can get even faster if you use aliases for your own machine
 alias ocr-deu='docker run --rm -it --network none -v $PWD:/home/work mhlavac/docker-tesseract ocr-deu'
 alias ocr-ces='docker run --rm -it --network none -v $PWD:/home/work mhlavac/docker-tesseract ocr-ces'
 alias ocr-eng='docker run --rm -it --network none -v $PWD:/home/work mhlavac/docker-tesseract ocr-eng'
-alias image2text-deu='docker run --rm -it --network none -v $PWD:/home/work mhlavac/docker-tesseract image2text-deu'
-alias image2text-ces='docker run --rm -it --network none -v $PWD:/home/work mhlavac/docker-tesseract image2text-ces'
-alias image2text-eng='docker run --rm -it --network none -v $PWD:/home/work mhlavac/docker-tesseract image2text-eng'
+alias img2txt-deu='docker run --rm -it --network none -v $PWD:/home/work mhlavac/docker-tesseract img2txt-deu'
+alias img2txt-ces='docker run --rm -it --network none -v $PWD:/home/work mhlavac/docker-tesseract img2txt-ces'
+alias img2txt-eng='docker run --rm -it --network none -v $PWD:/home/work mhlavac/docker-tesseract img2txt-eng'
 ```
