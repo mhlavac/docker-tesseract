@@ -8,5 +8,4 @@ RUN apt-get update && \
     apt-get install -y tesseract-ocr tesseract-ocr-deu tesseract-ocr-ces imagemagick && \
     cat /tmp/basrc_add >> ~/.bashrc
 
-RUN mkdir /home/work
 WORKDIR /home/work
