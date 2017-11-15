@@ -4,7 +4,7 @@ FROM tesseractshadow/tesseract4re
 
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y tesseract-ocr tesseract-ocr-deu tesseract-ocr-ces imagemagick && \
+    apt-get install -y tesseract-ocr tesseract-ocr-deu tesseract-ocr-ces imagemagick
 
 COPY ocr /bin/ocr
 COPY ocr-ces /bin/ocr-ces
