@@ -18,6 +18,7 @@ ocr() {
     echo "Converting images to text"
     for page in pages-*.png ; do
         tesseract -l $2 /home/work/$page ../${page%.png}
+        echo $page.txt
     done
 
     # Clean the tmp directory
