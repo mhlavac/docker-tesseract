@@ -4,23 +4,23 @@
 # Create and move to tmp directory
 echo "Creating tmp directory .ocrtmp"
 tmpdir=/tmp/ocrtmp
-rm -rf $tmpdir
+curdir=`pwd`
 mkdir -p $tmpdir
-cp $1 $tmpdir
-cd $tmpdir
 
 # Convert to PNG
 echo "Converting PDF to images"
-convert -density 300 $1 pages-%03d.png
+convert -density 300 $curdir/$1 $tmpdir/pages-%03d.png
 
 # OCR
 echo "Converting images to text"
+pushd $tmpdir
 for page in pages-*.png ; do
-    tesseract -l $2 /home/work/$page /home/work/${page%.png}
+    tesseract -l $2 $page $curdir/${page%.png}
+    chown --reference $curdir/$1 $curdir/${page%.png}.txt
+    chmod --reference $curdir/$1 $curdir/${page%.png}.txt
     echo ${page%.png}.txt
 done
 
 # Clean the tmp directory
-echo "Cleaning up"
-cd /home/work
+popd
 rm -rf $tmpdir
