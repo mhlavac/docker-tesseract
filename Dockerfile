@@ -16,13 +16,6 @@ RUN apt-get update && \
     rm -rf /var/lib/log/* && \
     mkdir /home/work
 
-
-COPY ocr /bin/ocr
-COPY ocr-ces /bin/ocr-ces
-COPY ocr-deu /bin/ocr-deu
-COPY ocr-eng /bin/ocr-eng
-COPY img2txt-ces /bin/img2txt-ces
-COPY img2txt-deu /bin/img2txt-deu
-COPY img2txt-eng /bin/img2txt-eng
+COPY files/ /
 
 WORKDIR /home/work
